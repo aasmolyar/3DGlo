@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("Привет. Я модуль - moduleOne"),console.log("Привет. Я модуль - moduleOne"),console.log("Привет. Я модуль - moduleOne"),console.log("My name is noduleTwo")})();
