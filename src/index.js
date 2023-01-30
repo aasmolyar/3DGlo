@@ -1,7 +1,7 @@
-import moduleOne from "./modules/one.js";
-import moduleTwo from "./modules/two.js";
+import timer from "./modules/timer.js";
+//import moduleTwo from "./modules/two.js";
 
-moduleOne();
-moduleTwo();
+timer('27 january 2023');
+//moduleTwo();
 
 
