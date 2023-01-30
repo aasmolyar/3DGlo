@@ -1,0 +1,21 @@
+.weekDay {
+  width: 11em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+    color: rebeccapurple;
+    width: 12em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+
+.watch {
+     width: 37%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    background: content-box radial-gradient(crimson, skyblue);
+}
