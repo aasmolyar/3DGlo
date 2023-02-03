@@ -1,7 +1,9 @@
-import timer from "./modules/timer.js";
-//import moduleTwo from "./modules/two.js";
+import timer from "./modules/timer";
+import menu from "./modules/menu";
+import modal from "./modules/modal";
 
 timer('27 january 2023');
-//moduleTwo();
+menu();
+modal();
 
 
