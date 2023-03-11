@@ -47,7 +47,7 @@ const timer = (deadline) => {
         let dateNow = new Date().getTime();
         let timeRemainikng = (dateStop - dateNow) / 1000;
         let days = Math.floor(timeRemainikng / 60 / 60 / 24); 
-        let hours = Math.floor((timeRemainikng / 60 / 60)); 
+        let hours = Math.floor((timeRemainikng / 60 / 60) % 60); 
         let minutes = Math.floor((timeRemainikng / 60) % 60); 
         let seconds = Math.floor(timeRemainikng % 60);
         
