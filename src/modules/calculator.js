@@ -56,8 +56,6 @@ const calculator = () => {
     };
 
     function formChecking(form) {
-/*         let activeForm = form.target.parentNode.parentNode.parentNode.parentNode;
-        let formId = activeForm.id; */
         let formNameValue;
         let formEmailValue;
         let formPhoneValue;
