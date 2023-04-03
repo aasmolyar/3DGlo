@@ -10,7 +10,7 @@ const slider = () => {
     let currentSlide = 0; // counter for slides
     let interval;
 
-    function removeDots () {
+/*     function removeDots () {
         dots.forEach(dot => dot.remove());
     }
     removeDots ();
@@ -23,7 +23,7 @@ const slider = () => {
             console.log('ulDots', ulDots, i);     
         }
     }
-    //addDots (); 
+    addDots ();  */
 
     const prevSlide = (elems, index, strClass) => {
         elems[index].classList.remove(strClass);        

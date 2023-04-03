@@ -1,4 +1,8 @@
-const calculator = () => {
+const calculator = (price = 100) => {
+    const calcBlock = document.querySelector('.calc-block');
+    const calcType = document.querySelector('.calc-type');
+    const total = document.getElementById('total');
+
     const square = document.querySelector('.calc-square');
     const count = document.querySelector('.calc-count');
     const day = document.querySelector('.calc-day');
@@ -23,6 +27,41 @@ const calculator = () => {
     const regExpName = /[^а-яА-я]/g;
     const regExpEmail = /[\-\.\w]+@([\w]+\.)+[\w]+/gi;
     const regExpPhone = /[^\d]/g;
+
+    const countCalc = () => {
+        const calcTypeValue = +calcType.options[calcType.selectedIndex].value;
+        const calcSquareValue = square.value;
+
+        let totalValue = 0;
+        let calcCountValue = 1;
+        let dayValue = 1;
+
+        if (count.value > 1) {
+            calcCountValue += +count.value / 10;
+        }
+
+        if (day.value && day.value < 5) {
+            dayValue = 2;
+        } else if (day.value && day.value < 10) {
+            dayValue = 1.5;
+        }
+    
+        if (calcType.value && square.value) {
+            totalValue = price * calcTypeValue * calcSquareValue * calcCountValue * dayValue;
+        } else {
+            totalValue = 0;
+        }
+
+        total.textContent = totalValue;
+    };
+
+    calcBlock.addEventListener('input', (e) => {
+
+        if (e.target === calcType || e.target === square ||
+            e.target === count || e.target === day) {
+            countCalc();
+        }
+    });
 
     square.addEventListener('input', (e) => {
         checkingNumbers(e);
@@ -112,6 +151,6 @@ const calculator = () => {
             alert('Данные отправлены');
         } 
     }
-}
+};
 
 export default calculator;
