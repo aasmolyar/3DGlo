@@ -1,3 +1,5 @@
+import { animate } from './helpers';
+
 const modal = () => {
     const modal = document.querySelector('.popup');
     const modalContent = document.querySelector('.popup-content');
@@ -11,7 +13,16 @@ const modal = () => {
         modal.style.display = 'block';
 
         if (window.innerHeight > 768 || window.innerWidth > 768) {
-            modalAnikmaiton();
+            animate({
+                duration: 500,
+                timing(timeFraction) {
+                  return timeFraction;
+                },
+                draw(progress) {
+                    modalContent.style.position = "absolute";
+                    modal.style.width = (progress * 100) + '%';
+                }
+              });
             }
         });
     });
@@ -22,7 +33,7 @@ const modal = () => {
         }
     });
 
-    function modalAnikmaiton() {
+/*     function modalAnikmaiton() {
         modalwidth++;
         modalMove = requestAnimationFrame(modalAnikmaiton);
 
@@ -34,7 +45,8 @@ const modal = () => {
             cancelAnimationFrame(modalMove);
             modalwidth = 0;
         }
-    }
+    } */
+
 };
 
 export default modal;
