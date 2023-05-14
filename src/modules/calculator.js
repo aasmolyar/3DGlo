@@ -119,7 +119,7 @@ const calculator = (price = 100) => {
             formPhoneValue = form3Phone.value;
         }
 
-        if (!regExpName.test(formNameValue) && formNameValue !== '') {
+       /*  if (!regExpName.test(formNameValue) && formNameValue !== '') {
             alert('Кирилица')
        } else {
             isError = true;
@@ -149,7 +149,7 @@ const calculator = (price = 100) => {
 
         if (!isError) {
             alert('Данные отправлены');
-        } 
+        }  */
     }
 };
 
